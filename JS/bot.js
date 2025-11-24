@@ -4,9 +4,9 @@ console.log('Starting...')
 
 function createBot () {
     const bot = mineflayer.createBot({
-    host: "localhost",
-    port: "25565",
-    username: "24ATERNOSBOT",
+    host: "WaterDuckMC.aternos.me",
+    port: "39150",
+    username: "CookieBOT",
     version: false
     })
     bot.on('login', function() {
@@ -20,7 +20,7 @@ function createBot () {
           bot.chat('24 ATERNOS > Bot started! - Made By Fortcote')
           bot.setControlState('forward', true)
           bot.setControlState('jump', true)
-          bot.setControlState('sprint', true)
+          bot.setControlState('sprint', false)
           break
           case ';stop':
             bot.chat('24 ATERNOS > Bot stoped! - Made By Fortcote')
@@ -38,4 +38,5 @@ function createBot () {
         bot.on('error', err => console.log(err))
         bot.on('end', createBot)
 }
+
 createBot()
